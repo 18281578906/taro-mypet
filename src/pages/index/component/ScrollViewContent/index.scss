@@ -1,0 +1,30 @@
+.scrollViewContent {
+    .scrollview {
+        width: 100%;
+        white-space:nowrap;         
+        margin: 40px 0;
+        .scroll_circle {
+            width: 230px;
+            display: inline-block;
+            text-align: center;
+            font-size: 20px;
+            color: rgba(46, 45, 45, 0.932);
+            .circle_img {
+                width: 100px;
+                height: 100px;
+                border-radius: 90px;
+                text-align: center;
+            }
+        }
+    }
+    // 隐藏scroll-view出现滚动条
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    uni-scroll-view .uni-scroll-view::-webkit-scrollbar {
+        /* 隐藏滚动条，但依旧具备可以滚动的功能 */
+        display: none
+    }
+
+}
