@@ -1,0 +1,26 @@
+.scrollViewContent {
+  .foster_title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    /* cursor: progress; */
+    color: #4a4848fa;
+    font-weight: 500;
+  }
+
+  .scrollview {
+    width: 100%;
+    white-space: nowrap;
+    margin: 40px 0;
+  }
+
+  // 隐藏scroll-view出现滚动条
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  uni-scroll-view .uni-scroll-view::-webkit-scrollbar {
+    /* 隐藏滚动条，但依旧具备可以滚动的功能 */
+    display: none
+  }
+
+}

@@ -1,7 +1,67 @@
-.test{
-    width: 300px;
-    .test1{
-           width: 3000px;
- 
+.indexPage {
+  .hydrated {
+    overflow-y: hidden;
+  }
+
+  .foster_title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    /* cursor: progress; */
+    color: #4a4848fa;
+    font-weight: 500;
+  }
+
+  .foster-house {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(46, 45, 45, 0.932);
+    margin-right: 40px;
+
+    .circle_img {
+      width: 300px;
+      height: 200px;
+      border-radius: 30px;
+      text-align: center;
     }
+  }
+
+  .adopt_star {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(46, 45, 45, 0.932);
+    margin-right: 40px;
+
+    .circle_img {
+      width: 200px;
+      height: 200px;
+      border-radius: 30px;
+      text-align: center;
+    }
+  }
+
+  .scroll_circle {
+    width: 173px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(46, 45, 45, 0.932);
+
+    .circle_img {
+      width: 100px;
+      height: 100px;
+      border-radius: 90px;
+      text-align: center;
+    }
+  }
+
+
+
+  .at-list__item--thumb .item-thumb {
+    width: 150px;
+    height: 100px;
+    font-size: 16px !important;
+  }
+
 }

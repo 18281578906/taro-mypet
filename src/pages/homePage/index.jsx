@@ -1,8 +1,8 @@
 import { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import './index.css'
-import NavBar from '../component/Navbar'
-import ContentPanel from '../component/ContentPanel'
+import NavBar from '../../component/Navbar'
+import ContentPanel from '../../component/ContentPanel'
 
 export default class HomePage extends Component {
 
@@ -21,7 +21,7 @@ export default class HomePage extends Component {
       <View className='homePage'>
         <NavBar title="我的"></NavBar>
         <ContentPanel>
-          
+
         </ContentPanel>
       </View>
     )

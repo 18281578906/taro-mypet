@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/component/*": ["./src/component/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/api": ["./src/api"],
+      "@/asset/*": ["./src/asset/*"],
+      "@/const/*": ["./src/constants/*"],
+      "@/image": ["./src/image"],
+      "@/store/*": ["./src/store/*"],
+    },
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "jsx": "react",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "src/type.d.ts"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "linterOptions": {
+    "exclude": ["node_modules/**"]
+  },
+
+  "compileOnSave": false
+}

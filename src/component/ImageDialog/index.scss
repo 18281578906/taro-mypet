@@ -1,0 +1,40 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #ccccccbf;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+
+
+  .image-dialog {
+    position: relative;
+    top: 20%;
+    width: 600px;
+    height: 600px;
+    z-index: 1000;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 5px;
+
+
+    .img-content {
+      width: 600px;
+      height: 500px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    .btn-circle {
+
+      .circle {
+        width: 100px;
+      }
+    }
+
+
+  }
+}

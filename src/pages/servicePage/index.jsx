@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { View, Text } from '@tarojs/components'
-import NavBar from '../component/Navbar'
-import ContentPanel from '../component/ContentPanel'
+import NavBar from '../../component/Navbar'
+import ContentPanel from '../../component/ContentPanel'
 import './index.css'
 
 export default class ServicePage extends Component {

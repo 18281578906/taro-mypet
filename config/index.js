@@ -1,3 +1,6 @@
+const isH5 = process.env.TARO_ENV === 'h5'
+const HOST = '"http://xxx"'
+const path = require('path')
 const config = {
   projectName: 'taro-mypet',
   date: '2021-3-16',
@@ -13,12 +16,22 @@ const config = {
     '@tarojs/plugin-sass',
   ],
   defineConstants: {
+    defineConstants: {
+      HOST: isH5 ? '"/api"' : 'http://localhost:3001'
+    },
+  },
+  alias: {
+    '@/component': path.resolve(__dirname, '..', 'src/component'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/api': path.resolve(__dirname, '..', 'src/api'),
+    "@/asset": path.resolve(__dirname, '..', 'src/asset'),
+    "@/constants": path.resolve(__dirname, '..', 'src/constants'),
+    "@/image": path.resolve(__dirname, '..', 'src/image'),
+    "@/store": path.resolve(__dirname, '..', 'src/store'),
   },
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   mini: {
@@ -51,17 +64,19 @@ const config = {
       host: 'localhost',
       port: 10086,
       proxy: {
-          '/api': {
-              target: 'http://localhost:3001',  // 服务端地址
-              changeOrigin: true
-          }
+        '/api': {
+          target: 'http://localhost:3001', // 服务端地址
+          pathRewrite: {
+            '^/api/': '/api'
+          },
+          changeOrigin: true
+        }
       }
-  },
+    },
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
