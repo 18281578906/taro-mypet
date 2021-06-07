@@ -1,0 +1,39 @@
+.froumPage-add-talk {
+  .navBar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 140px;
+    margin-bottom: 50px;
+
+    .navBar-cancel {
+      // flex: 1;
+    }
+
+    .navBar-publish {
+      width: 100px;
+      height: 50px;
+      font-size: 24px;
+      line-height: 50px;
+    }
+  }
+
+  .add-talk {
+    margin-bottom: 50px;
+
+    .add-talk-world {
+      .at-textarea {
+        border: none;
+        color: #333333;
+      }
+
+    }
+  }
+
+  .hid-addbtn {
+    .at-image-picker__choose-btn {
+      display: none;
+    }
+  }
+}

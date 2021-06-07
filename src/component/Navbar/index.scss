@@ -1,13 +1,14 @@
 .navbarWrap {
   font-size: 24px;
   font-weight: bold;
-  padding: 0 35px;
-  height: 100px;
+  height: 180px;
   line-height: 120px;
   color: rgba(24, 23, 23, 0.849);
-  //   background-color: rgb(254,221,66);
+  padding-left: 40px;
+  padding-right: 150px;
+
+
   .navbar {
     display: flex;
-    justify-content: space-between;
   }
 }

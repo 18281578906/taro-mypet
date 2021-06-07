@@ -4,14 +4,14 @@ export default {
     'pages/forumPage/index',
     'pages/servicePage/index',
     'pages/homePage/index',
+    'pages/forumPage/addMessage/index',
   ],
   tabBar: {
     color: "#a9b7b7",
     selectedColor: "#11cd6e",
     // borderStyle: 'white', 
     backgroundColor: "#ffffff",
-    list: [
-      {
+    list: [{
         pagePath: 'pages/index/index',
         text: '首页',
         iconPath: './image/home.png',
@@ -34,7 +34,8 @@ export default {
         text: '我的',
         iconPath: './image/index.png',
         selectedIconPath: './image/index-hover.png'
-      }]
+      }
+    ]
   },
   window: {
     backgroundTextStyle: 'light',

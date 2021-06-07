@@ -1,0 +1,64 @@
+.at-fab {
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  z-index: 10000;
+}
+
+.froumPage {
+  position: relative;
+  z-index: 1;
+
+  .talk-list {
+    padding-top: 40px;
+
+    padding-bottom: 40px;
+    border-bottom: 2px solid #cccccc;
+
+    .talk-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .talk-avatar {}
+
+      .talk-name {
+        margin-left: 20px;
+      }
+    }
+
+    .talk-word {
+      margin-bottom: 20px;
+    }
+
+    .talk-function {
+      text-align: right;
+      margin: 10px 0;
+
+      .talk-input {
+        width: 20px;
+        height: 20px;
+      }
+
+      .talk-icon {
+        cursor: pointer;
+        margin-right: 20px;
+      }
+
+      .talk-heart {}
+    }
+
+    .talk-question {
+      font-size: 24px;
+
+      .list-item {
+        margin: 10px 0;
+
+        .list-name {
+          color: #1584f9;
+        }
+      }
+    }
+  }
+
+}
