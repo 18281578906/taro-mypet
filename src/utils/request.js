@@ -3,6 +3,8 @@ import Taro from "@tarojs/taro";
 export const testUrl ='http://localhost:3001';
 //判断微信小程序和h5
 export const isWexin = process.env.TARO_ENV === 'weapp';
+export const isH5 = process.env.TARO_ENV === 'h5';
+
 export const post = (url, data, method = 'POST') => {
     let strUrl = isWexin ? testUrl+ url :url;
     return Taro.request({

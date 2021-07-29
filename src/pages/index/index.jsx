@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { View, Image, Text } from '@tarojs/components'
+import { View, Image, Text, Button } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import ContentPanel from '@/component/ContentPanel'
 import ImageDialog from '@/component/ImageDialog'
@@ -7,9 +7,10 @@ import MyScrollView from '@/component/MyScrollView'
 import SwipterContent from '@/component/SwipterContent'
 import { AtList, AtListItem } from "taro-ui"
 import { inject, observer } from 'mobx-react'
-import * as api from '../../utils/request'
+import { get, post, isWexin } from '@/utils/request'
 import swipter from '@/image/swiper3.jpeg'
 import './index.scss'
+import React from 'react'
 
 @inject('store')
 @observer
@@ -25,8 +26,12 @@ export default class Index extends Component {
   componentWillMount () { }
 
   componentDidMount () {
-    api.get('/api');
+    // api.get('/api');
+    // 必须是在用户已经授权的情况下调用
+
   }
+
+
 
   componentWillUnmount () { }
 

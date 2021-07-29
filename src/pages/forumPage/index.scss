@@ -8,6 +8,19 @@
 .froumPage {
   position: relative;
   z-index: 1;
+  .click-icon {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 120px;
+    .at-icon-add {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .at-icon-add::before{
+      font-size: 48px;
+    }
+  }
 
   .talk-list {
     padding-top: 40px;
@@ -19,6 +32,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      font-size: 36px;
 
       .talk-avatar {}
 
@@ -29,6 +43,7 @@
 
     .talk-word {
       margin-bottom: 20px;
+      font-size: 30px;
     }
 
     .talk-function {

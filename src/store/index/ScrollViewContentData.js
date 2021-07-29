@@ -4,7 +4,8 @@ import {
 import swipter from '@/image/swiper3.jpeg'
 
 const ScrollViewContentData = observable({
-  serviceList: [{
+  serviceList: [
+    {
       id: 'service1',
       serviceName: '宠物用品',
       serviceid: 'serviceid1',

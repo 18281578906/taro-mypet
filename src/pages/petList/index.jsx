@@ -65,7 +65,6 @@ export default class HomePage extends Component {
           {!isLogin ? <Button onClick={this.getUserInfo}>登陆</Button>
             : <Button>{userInfo?.avatarUrl}</Button>
           }
-
         </ContentPanel>
       </View>
     )

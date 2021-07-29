@@ -54,7 +54,7 @@ export default class ForumPage extends Component {
     return (
       <View className='froumPage'>
         <ContentPanel>
-          <AtFab onClick={this.onButtonClick}>
+          <AtFab className='click-icon' onClick={this.onButtonClick}>
             <Text className='at-fab__icon at-icon at-icon-add'></Text>
           </AtFab>
           <View className='talk-list'>

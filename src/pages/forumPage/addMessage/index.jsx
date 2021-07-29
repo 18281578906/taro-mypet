@@ -88,6 +88,19 @@ export default class ForumPage extends Component {
     }
 
   }
+
+  getLocation = () => {
+    Taro.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        console.log(res);
+        const latitude = res.latitude
+        const longitude = res.longitude
+        const speed = res.speed
+        const accuracy = res.accuracy
+      }
+    })
+  }
   render () {
     const { showAddBtn, showDialog, imgUrl } = this.state
     return (
@@ -124,6 +137,7 @@ export default class ForumPage extends Component {
                 title='所在位置'
                 arrow='right'
                 thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
+                onClick={this.getLocation}
               />
               <AtListItem
                 title='提醒谁看'
