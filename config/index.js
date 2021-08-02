@@ -2,7 +2,7 @@ const isH5 = process.env.TARO_ENV === 'h5'
 const HOST = '"http://xxx"'
 const path = require('path')
 const config = {
-  projectName: 'taro-mypet',
+  projectName: '果冻雪糕の猫舍',
   date: '2021-3-16',
   designWidth: 750,
   deviceRatio: {

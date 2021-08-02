@@ -1,5 +1,5 @@
 {
-  "name": "taro-mypet",
+  "name": "果冻雪糕の猫舍",
   "version": "1.0.0",
   "private": true,
   "description": "",
@@ -45,7 +45,7 @@
     "@types/node": "^16.4.5",
     "axios": "^0.21.1",
     "install": "^0.13.0",
-    "mobx": "6.1.5",
+    "mobx": "^6.3.2",
     "mobx-react": "^7.1.0",
     "nervjs": "^1.5.7",
     "npm": "^7.7.5",

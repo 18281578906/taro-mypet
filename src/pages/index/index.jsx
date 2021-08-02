@@ -10,9 +10,8 @@ import { inject, observer } from 'mobx-react'
 import { get, post, isWexin } from '@/utils/request'
 import swipter from '@/image/swiper3.jpeg'
 import './index.scss'
-import React from 'react'
 
-@inject('store')
+@inject('contentStore')
 @observer
 export default class Index extends Component {
   constructor(props) {
@@ -53,19 +52,23 @@ export default class Index extends Component {
       })
     }
   }
+  goToPetList = (serviceid, serviceName) => {
+    console.log(serviceid);
+    Taro.navigateTo({ url: `./petList/index?serviceid=${serviceid}&serviceName=${serviceName}` })
+  }
   render () {
-    const { ScrollViewContentData: { serviceList, fosterCenterList, adoptList } } = this.props.store
+    const { contentStore: { serviceList, fosterCenterList, adoptList, BreedinCatList, imageList } } = this.props
     const { showDialog, dialogImg } = this.state
     return (
       <View className="indexPage">
         <ContentPanel title='index'>
           {/* 轮播 */}
-          <SwipterContent />
+          <SwipterContent imageList={imageList} />
           {/* 功能列表 */}
           <MyScrollView>
             {
               serviceList.map((item) =>
-                <View className='scroll_circle' key={item.serviceid}>
+                <View className='scroll_circle' key={item.serviceid} onClick={() => this.goToPetList(item.id, item.serviceName)}>
                   <View><Image className='circle_img' src={item.serviceImg} /></View>
                   <View><Text>{item.serviceName}</Text></View>
                 </View>
@@ -75,7 +78,7 @@ export default class Index extends Component {
           <MyScrollView title='寄养中心'>
             {
               fosterCenterList.map((item) =>
-                <View className="foster-house" key={item.serviceid} onClick={() => this.showDialogImg(item.serviceImg)}>
+                <View className="foster-house" key={item.serviceid}>
                   <View><Image className='circle_img' src={item.serviceImg} /></View>
                   <View><Text>{item.serviceName}</Text></View>
                 </View>
@@ -85,7 +88,7 @@ export default class Index extends Component {
           <MyScrollView title='领养明星'>
             {
               adoptList.map((item) =>
-                <View className='adopt_star' key={item.serviceid} onClick={() => this.showDialogImg(item.serviceImg)}>
+                <View className='adopt_star' key={item.serviceid}>
                   <View><Image className='circle_img' src={item.serviceImg} /></View>
                   <View><Text>{item.serviceName}</Text></View>
                 </View>
@@ -95,7 +98,7 @@ export default class Index extends Component {
           <View className='pet-info'>
             <View className='foster_title'>爱宠信息</View>
             <AtList>
-              {adoptList.map((item) =>
+              {BreedinCatList.map((item) =>
                 <AtListItem
                   title={item.serviceName}
                   arrow='right'

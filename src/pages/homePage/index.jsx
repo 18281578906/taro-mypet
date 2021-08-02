@@ -1,9 +1,10 @@
 import { Component } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Text, Button } from '@tarojs/components'
+import { View, Text, Button, Image } from '@tarojs/components'
 import './index.css'
 import NavBar from '@/component/Navbar'
 import ContentPanel from '@/component/ContentPanel'
+import poster from '@/image/poster.png'
 
 export default class HomePage extends Component {
 
@@ -59,14 +60,7 @@ export default class HomePage extends Component {
   render () {
     const { userInfo, isLogin } = this.state;
     return (
-      <View className='homePage' >
-        <NavBar title="我的"></NavBar>
-        <ContentPanel>
-          {!isLogin ? <Button onClick={this.getUserInfo}>登陆</Button>
-            : <Button>{userInfo?.avatarUrl}</Button>
-          }
-
-        </ContentPanel>
+      <View>
       </View>
     )
   }

@@ -1,15 +1,26 @@
 import { Component } from 'react'
 import { View, Swiper, SwiperItem, Image } from '@tarojs/components'
-import swiper1 from '@/image/swiper1.jpeg'
-import swiper2 from '@/image/swiper2.jpeg'
-import swiper3 from '@/image/swiper3.jpeg'
+import BigImage from '@/component/BigImage'
 import './index.scss'
 
 export default class SwipterContent extends Component {
+  state = {
+    isOpened: false,
+    bigImgUrl: ''
+  }
+  changeStatus = (imgurl) => {
+    this.setState({
+      isOpened: !this.state.isOpened,
+      bigImgUrl: imgurl,
+    })
+  }
   render () {
+    const { imageList } = this.props
+    const { isOpened, bigImgUrl } = this.state
     return (
-      <View className="swipterContent">
-        <Swiper
+      <View className='swipterContent'>
+        <BigImage isOpened={isOpened} onClose={this.changeStatus} bigImgUrl={bigImgUrl} />
+        {imageList && imageList.length ? <Swiper
           className='swipter'
           indicatorColor='#999'
           indicatorActiveColor='#333'
@@ -19,17 +30,16 @@ export default class SwipterContent extends Component {
           // autoplay
           touch
         >
-          <SwiperItem
-          >
-            <Image src={swiper1} className='img' />
-          </SwiperItem>
-          <SwiperItem>
-            <Image src={swiper2} className='img' />
-          </SwiperItem>
-          <SwiperItem>
-            <Image src={swiper3} className='img' />
-          </SwiperItem>
-        </Swiper>
+          {
+            imageList.map(item => {
+              return (
+                <SwiperItem key={item.image}>
+                  <Image src={item.image} className='img' onClick={() => this.changeStatus(item.image)} />
+                </SwiperItem>
+              )
+            })
+          }
+        </Swiper> : null}
       </View>
     )
   }

@@ -1,0 +1,14 @@
+.contentPanel {
+  margin: 20px 0 30px 0;
+  .swipter {
+      height: 500px;
+  }
+  .big-image {
+      scale: 1.5 !important;
+  }
+}
+.big-img-container {
+  .at-curtain__container {
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,48 @@
+.petList {
+
+  //list
+  .at-list{  
+    .item-thumb{
+      width: auto !important;
+      height: auto !important;
+
+      .item-thumb__info{
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 90px;
+      }
+      
+    }
+    .item-content__info-title {
+      font-size: 36px;
+      font-weight: 500;
+    }
+    .item-content__info-note {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .item-extra__info {
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(250, 78, 10, 0.82);
+    }
+    .item-extra__icon {
+      right: -30px !important;
+    }
+  }
+  .list-item {
+    position: relative;
+  }
+  .cat-gender {
+    position: absolute;
+    font-size: 24px;
+    color: #ec7c05bd;
+    left: 250px;
+    top: 55px;
+  }
+}
+.empty-world {
+  text-align: center;
+  margin-top: 300px;
+}

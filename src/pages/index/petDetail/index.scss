@@ -1,0 +1,66 @@
+.petDetail {
+  .swipter-content{
+    position: relative;
+    z-index: 100;
+
+  }
+  .video-title{
+    position: relative;
+    top: -50px;
+    text-align: center;
+  }
+  .video-content {
+    width: 95%;
+    margin: 0 20px;
+    overflow: scroll;
+    .video-list {
+      width: 100%;
+      display: inline-block;
+      margin-right: 20px;
+      #video {
+        width: 100%;
+      }
+    }
+  }
+
+  .picture-tile{
+    text-align: left;
+    margin: 40px;
+  }
+  .picture-list {
+  margin: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  .picture-left .picture1{
+    margin-bottom: 40px;
+  }
+  .picture-right .picture1{
+    margin-top: 40px;
+  }
+ .picture1 {
+  width: 330px;
+  height: 250px;
+  image {
+    width: 330px;
+    height: 250px;
+    border-radius: 30px;
+
+  }
+}
+  .picture2 {
+    width: 330px;
+    height: 500px;
+
+    image {
+      width: 330px;
+      height: 500px;
+      border-radius: 30px;
+
+    }
+ }
+  }
+ 
+
+
+}

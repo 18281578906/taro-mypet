@@ -6,3 +6,4 @@
 outputRoot:dist/${process.env.TARO_ENV}
 ```
 
+#### 静态页面，更新需手动更新代码

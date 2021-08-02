@@ -3,7 +3,7 @@ import { View, ScrollView } from '@tarojs/components'
 import './index.scss'
 import { inject, observer } from 'mobx-react'
 
-@inject('store')
+@inject('contentStore')
 @observer
 export default class SwipterContent extends Component {
   onScrollToUpper () { }
